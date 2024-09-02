@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <button id="connect-button" class="btn top-left">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg"
+        alt="MetaMask"
+        class="icon"
+      />
+      <span class="button-text">Connect MetaMask</span>
+    </button>
+    <div class="container">
+      <h1>Interoperability Counter</h1>
+
+      <!-- need to add selection for id=destination-select -->
+      <div class="form-group">
+        <label for="destination-select">Change Destination Network</label>
+        <select id="destination-select" class="form-control">
+          <option value="c-chain">C-Chain</option>
+          <option value="dispatch">Dispatch</option>
+          <option value="stealthnet">Stealthnet</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="source-network-select">Change Source Network</label>
+        <select id="source-network-select" class="form-control">
+          <option value="c-chain">C-Chain</option>
+          <option value="dispatch">Dispatch</option>
+          <option value="stealthnet">Stealthnet</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <h2>Make a Selection</h2>
+        <button class="btn" id="send-increment-button" disabled>
+          Send Increment Request
+        </button>
+        <button class="btn" id="send-decrement-button" disabled>
+          Send Decrement Request
+        </button>
+      </div>
+
+      <div class="form-group">
+        <h1>Network Counts</h1>
+        <div class="card-container" id="count-container"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
