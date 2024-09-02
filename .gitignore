@@ -3,6 +3,7 @@ notes.txt
 __pycache__/
 *.pyc
 .env
-node_modules/
+./frontend/node_modules/
 *.log
-config.py
+./backend/config.py
+./backend/.env
